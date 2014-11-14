@@ -33,14 +33,33 @@
       text-decoration: underline;
       color: #4285F4;
     }
+    #about {
+      display: none;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+    #toggle {
+      cursor: pointer;
+    }
   </style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    $('#toggle').click(function(){
+      $('#about').fadeIn('slow');
+    });
+  });</script>
 </head>
 <body>
   <ul>
-    <li>robert douglas mckaye</li>
+    <li id="toggle">robert douglas mckaye</li>
     <li><a href="projects">projects</a></li>
     <li>SILO</li>
     <li><a href="mailto:info@rdmckaye.com">email</a></li>
   </ul>
+  <div id="about">
+    <h3>Robert Douglas McKaye  BEDS, MAA</h3>
+    <p>Robert is an architecture and design professional from Canada currently living in Barcelona. In 2011, he obtained a bachelors degree in architecture Dalhousie University's BEDS program in Halifax, Canada. From 2013 he has been enrolled in the MAA Masters of Advanced Architecture program at the Institute for Advanced Architecture of Catalonia, where he is engaged in urban installation projects, the development of prototypes for interactive architecture and energy generation, and post-graduate research on innovative product design and experimental technologies in architecture. He was selected as class representative speaker at the IAAC graduating ceremony of 2014, and has since began a teaching assistant role with the visiting Global Architecture School 2014-15. He has held positions at KPMB Architects in Toronto, contributing expertise in BIM modeling software and architectural detailing, and at BMA in Oisterwijk, Netherlands as a renderings specialist and small building project manager. His ability to connect a multi-scalar approach to architecture through digital technologies, hand crafting, construction management, and conceptual narratives has led to the development of a diverse portfolio. </p>
+  </div>
 </body>
 </html>
