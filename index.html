@@ -35,7 +35,7 @@
 }
 
 
-.s02_RMD-icon:hover {background: black; color: #00B0EB; border-color: #00B0EB;}
+.s02_RMD-icon:hover, .s02_RMD-icon.active {background: black; color: #00B0EB; border-color: #00B0EB;}
 .s03_Portfolio-icon:hover {background: #00AFEA; color: #FFF346; border-color: #FFF346;}
 .s04_SYLO-icon:hover {background: #FEF14F; color: #F90F8C; border-color: #F90F8C;}
 .s05_contact-icon:hover {background: #F20088; border-color: #F20088}
@@ -106,12 +106,13 @@
   <script type="text/javascript">
   $(function() {
     $('#toggle').click(function(){
-      $('#about').fadeIn('slow');
+      $('#about').fadeToggle('slow');
+      $(this).find('a').toggleClass('active')
     });
     $(window).resize(function() {
-      $('#about').css('width', $('#menu').width() + 31)
+      $('#about').css('width', $('#menu').width())
     })
-    $('#about').css('width', $('#menu').width() + 31)
+    $('#about').css('width', $('#menu').width())
     
   });</script>
 </head>
