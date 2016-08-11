@@ -1,0 +1,22 @@
+/* ----------------------------------------------------
+   created with http://www.codeandweb.com/texturepacker 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:8d98b95512e894047d170786c6a722ca:cc40dbd15a3d474021948b4bb1c0354e:61e53af8b0b91020742bc548d44c899f$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(sprites.png);}
+
+.02_RMD-icon {width:207px; height:71px; background-position: -210px -1px}
+.02_RMD-icon-HOVER {width:207px; height:71px; background-position: -1px -1px}
+.03_Portfolio-icon {width:131px; height:72px; background-position: -1px -147px}
+.03_Portfolio-icon-HOVER {width:131px; height:71px; background-position: -1px -74px}
+.04_SYLO-icon {width:131px; height:72px; background-position: -134px -147px}
+.04_SYLO-icon-HOVER {width:131px; height:71px; background-position: -134px -74px}
+.05_contact-icon {width:131px; height:72px; background-position: -267px -147px}
+.05_contact-icon-HOVER {width:131px; height:71px; background-position: -267px -74px}

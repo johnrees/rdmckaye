@@ -4,10 +4,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>rdmckaye</title>
   <style type="text/css">
+    @font-face {
+      font-family: 'Tw Cen MT';
+      src: url('TwCenMT-Regular.eot');
+      src: url('TwCenMT-Regular.eot?#iefix') format('embedded-opentype'),
+        url('TwCenMT-Regular.woff') format('woff'),
+        url('TwCenMT-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(sprites.png); text-indent: -999px;}
+
+.s02_RMD-icon {width:207px; height:72px; background-position: -210px -1px}
+.s02_RMD-icon:hover {width:207px; height:72px; background-position: -1px -1px}
+.s03_Portfolio-icon {width:131px; height:72px; background-position: -1px -147px}
+.s03_Portfolio-icon:hover {width:131px; height:71px; background-position: -1px -74px}
+.s04_SYLO-icon {width:131px; height:72px; background-position: -134px -147px}
+.s04_SYLO-icon:hover {width:131px; height:71px; background-position: -134px -74px}
+.s05_contact-icon {width:131px; height:72px; background-position: -267px -147px}
+.s05_contact-icon:hover {width:131px; height:71px; background-position: -267px -74px}
+
     body {
+      font-family: 'Tw Cen MT', Arial Narrow, sans-serif;
+      text-transform: uppercase;
       margin: 4em 1em;
-      font-family: Arial Narrow, sans-serif;
-      font-size: 14px;
+      font-size: 20px;
       line-height: 1em;
       -webkit-font-smoothing: antialias;
     }
@@ -22,16 +44,18 @@
     }
     li {
       display: inline-block;
-      border-right: 1px solid black;
-      padding: 0 15px !important;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      margin: 0;
     }
     li:last-child {
       padding-right: 0 !important;
       border: none;
     }
     a {
-      text-decoration: underline;
-      color: #4285F4;
+      text-decoration: none;
+      color: #000;
+      cursor: pointer;
     }
     #about {
       display: none;
@@ -52,10 +76,14 @@
 </head>
 <body>
   <ul>
-    <li id="toggle">robert douglas mckaye</li>
-    <li><a href="https://drive.google.com/file/d/0By95HBdvOfT1cjVXTVFucGJSQU0/view?usp=sharing" target="_blank">projects</a></li>
-    <li><a href="http://cargocollective.com/rdmckaye">SILO</a></li>
-    <li><a href="mailto:info@rdmckaye.com">email</a></li>
+    <li id="toggle">
+      <a class="sprite s02_RMD-icon">Robert Douglas McKaye</a>
+      <!-- <img src="images/02_RMD icon.png" alt="Robert Douglas McKaye" /> -->
+    </li>
+    <li>
+    <a href="https://drive.google.com/file/d/0By95HBdvOfT1cjVXTVFucGJSQU0/view?usp=sharing" class="sprite s03_Portfolio-icon" target="_blank">Portfolio/CV</a></li>
+    <li><a href="http://cargocollective.com/rdmckaye" class="sprite s04_SYLO-icon">SYLO</a></li>
+    <li><a href="mailto:info@rdmckaye.com" class="sprite s05_contact-icon">Contact</a></li>
   </ul>
   <div id="about">
 
