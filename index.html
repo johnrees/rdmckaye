@@ -13,6 +13,9 @@
       font-weight: normal;
       font-style: normal;
     }
+    #about {
+      text-align: left;
+    }
 
 /*.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(sprites.png); text-indent: -999px;}
 
@@ -38,17 +41,23 @@
 .s05_contact-icon:hover {background: #F20088; border-color: #F20088}
 
     body {
-      font-family: 'Tw Cen MT', Arial Narrow, sans-serif;
+      font-family: Arial Narrow, sans-serif;
       margin: 4em 1em;
-      font-size: 20px;
-      line-height: 1em;
+      font-size: 15px;
+      line-height: 1.2em;
       -webkit-font-smoothing: antialias;
+      text-align: center;
     }
     ul {
-      display: block;
+      display: inline-block;
+      border: 1px solid black;
+      
       text-align: center;
       font-family: 'Tw Cen MT', Arial Narrow, sans-serif;
       text-transform: uppercase;
+      font-size: 17px;
+      overflow: hidden;
+      padding: 10px !important;
     }
     ul,li {
       list-style: none;
@@ -57,23 +66,34 @@
     }
     li {
       display: inline-block;
-      padding-right: 5px;
-      padding-bottom: 5px;
-      margin: 0;
+/*      padding-right: 5px;
+      padding-bottom: 5px;*/
+      margin: 5px;
     }
-    li:last-child {
+/*    li:last-child {
       padding-right: 0 !important;
       border: none;
-    }
+    }*/
     a {
       text-decoration: none;
       color: #000;
       cursor: pointer;
     }
+    #container {
+      display: inline-block;
+      margin: 0 auto;
+      overflow: hidden;
+      max-width: 95%;
+    }
     #about {
       display: none;
-      max-width: 800px;
-      margin: 30px auto;
+      /*max-width: 800px;*/
+      /*margin: 30px auto;*/
+      margin-top: 30px;
+      margin-bottom: 30px;
+      line-height: 1.3 !important;
+      margin-right: 0;
+      padding: 0;
     }
     #toggle {
       cursor: pointer;
@@ -85,10 +105,16 @@
     $('#toggle').click(function(){
       $('#about').fadeIn('slow');
     });
+    $(window).resize(function() {
+      $('#about').css('width', $('#menu').width() + 22)
+    })
+    $('#about').css('width', $('#menu').width() + 22)
+    
   });</script>
 </head>
 <body>
-  <ul>
+<div id="container">
+  <ul id="menu">
     <li id="toggle">
       <a class="sprite s02_RMD-icon">Robert Douglas McKaye</a>
       <!-- <img src="images/02_RMD icon.png" alt="Robert Douglas McKaye" /> -->
@@ -99,7 +125,6 @@
     <li><a href="mailto:info@rdmckaye.com" class="sprite s05_contact-icon">Contact</a></li>
   </ul>
   <div id="about">
-
 <h3>Robert Douglas McKaye</h3>
 
 <a href="www.rdmckaye.com">www.rdmckaye.com</a>
@@ -110,5 +135,6 @@
 
 <p>Robert is an architecture and design professional from Canada currently living in Barcelona. He has a Masters from the Institute of Advanced Architecture of Catalonia (IAAC) in Barcelona, and a Bachelors in of Environmental Design from Dalhousie University in Halifax. He has acted as assistant tutor for the CIEE Global Architecture and Design School (GAD), assistant coordinator and tutor for the IAAC Global Summer School, and in 2014 was selected as class representative speaker of the IAAC graduating ceremony. His research engages all levels of architecture, ranging from prototyping of smart components and products, computational design-build projects, and experimental urbanism practises. He has held positions at KPMB Architects in Toronto, contributing expertise in BIM, digital design, local building and municipal standards, and architectural detailing; and at BMA in Oisterwijk, Netherlands as a renderings specialist and small building project manager. In 2015 he founded SILO (Social Infrastructure for Life in Operation), a collaborative platform for the sharing of ideas and expertise related to social infrastructure and interaction design. His ability to connect a multi-scalar approach to architecture through digital technologies, hand crafting, construction management, and conceptual narratives has led to the development of a diverse portfolio.</p>
   </div>
+</div>
 </body>
 </html>
